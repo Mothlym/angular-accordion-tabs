@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-accordion-tabs';
+  public tabs = [];
+
+  public select(event: any): void {
+
+  }
 }

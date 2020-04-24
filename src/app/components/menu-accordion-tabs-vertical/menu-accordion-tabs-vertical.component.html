@@ -1,0 +1,17 @@
+<div class="flex-container-column">
+  <div class="flex-container">
+    <div #tabsTag>
+      <a *ngFor="let tab of tabs" class="tab tab-background column" [class.active]="tab.active" (click)="enable(tab)">
+        <span style="padding-right: 15px;">{{tab.name}}</span>
+        <span class="icon-container">
+          <i class="fas idp-method-type-icon" [class]="tab.icon"></i>
+        </span>
+      </a>
+    </div>
+    <div #tabContentTag class="tab-content">
+      <ng-template [ngTemplateOutlet]="templateRef" [ngTemplateOutletContext]="{$implicit: (selectedTab)}">
+
+      </ng-template>
+    </div>
+  </div>
+</div>
